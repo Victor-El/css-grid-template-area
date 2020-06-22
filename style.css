@@ -1,0 +1,141 @@
+:root {
+    background-color: aqua;
+}
+
+#modal {
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#modal h1 {
+    height: 50%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: whitesmoke;
+}
+
+#app {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    grid-gap: 1px;
+    box-shadow: 2px 2px 5px 4px darkgrey;
+    grid-template-rows: 1fr 5fr 1fr;
+    display: grid;
+    grid-template-areas: "h h h h h h h h h h h h"
+                         "s s s s c c c c c c c c"
+                         "f f f f f f f f f f f f";
+}
+
+.box{
+    border: 1px solid grey;
+}
+
+.blue {
+    background-color: rgb(50, 110, 150);
+}
+
+.red {
+    background-color: rgb(250, 150, 110);
+}
+
+.green {
+    background-color: rgb(50, 250, 150);
+}
+
+#header-box {
+    width: 100vw;
+    grid-area: h;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#sidebar-box {
+    grid-area: s;
+}
+
+#content-box {
+    grid-area: c;
+}
+
+#footer-box {
+    grid-area: f;
+}
+
+#nav-ul {
+    min-width: 100px;
+    flex-grow: 3;
+    display: flex;
+}
+
+#nav-ul li {
+    margin: 20px;
+    display: block;
+}
+
+#nav-ul > li > a {
+    text-decoration: none;
+    color: wheat
+}
+
+#header-div {
+    min-width: 100px;
+    background-color: balck;
+    flex-grow: 1;
+}
+
+#header-div a {
+    text-decoration: none;
+    color: darkorchid;
+    cursor: pointer;
+}
+
+
+@media only screen and ( max-width: 400px) {
+    :root {
+        background-color: brown;
+    }
+    
+    #nav-ul {
+        display: none;
+    }
+    
+    .hamburger {
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+    margin: 10px;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.dash {
+    height: 3px;
+    width: 50px;
+    background-color: black;
+}
+
+#close {
+    position: fixed;
+    top: 1;
+    left: 1;
+    padding: 10px 10px 1px 30px;
+    color: white;
+    font-family: monospace;
+    font-size: 5em;
+    cursor: pointer;
+}
+}
